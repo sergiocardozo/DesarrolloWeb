@@ -1,0 +1,113 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+  background: #a90329; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #a90329 0%,
+    #8f0222 44%,
+    #6d0019 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #a90329 0%,
+    #8f0222 44%,
+    #6d0019 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #a90329 0%,
+    #8f0222 44%,
+    #6d0019 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+  background-attachment: fixed;
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+img {
+  max-width: 100%;
+}
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero {
+  margin-bottom: 40px;
+}
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.listas-productos {
+  padding: 0;
+  list-style: none;
+}
+.listas-productos li {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+}
+/**2(0) + 1**/
+.listas-productos li:nth-child(2n + 1) {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .listas-productos li {
+    width: 33.3%;
+  }
+  .listas-productos li:nth-child(2n + 1) {
+    clear: unset;
+  }
+  .listas-productos li:nth-child(3n + 1) {
+    clear: both;
+  }
+}
+.listas-productos li img {
+  border: 10px solid #500214;
+  transition: border-color 0.3s ease-in-out;
+}
+.listas-productos li img:hover {
+  border: 10px solid #27020a;
+}
+.listas-productos li p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+}
+span.precio {
+  color: #ffce00;
+  font-size: 40px;
+}
+.boton {
+  background-color: #ffce00;
+  padding: 10px 40px;
+  margin-top: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: #6d0019;
+}
+.boton:hover {
+  background-color: #aa8a09;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
